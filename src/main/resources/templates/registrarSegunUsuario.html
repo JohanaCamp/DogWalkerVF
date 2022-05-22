@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8"></meta>
+<title>Walker</title>
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet" th:href="@{/css/Kevin.css}" />
+<link rel="stylesheet"	th:href="@{/css/aos.css}" />	
+	
+
+</head>
+
+<body>
+
+
+	<div class="registration-form cambios">
+		<form>
+
+			<div class="text-center">
+
+				<h1 class=" create-type">¿Cómo te quieres registrar? </h1>
+
+			</div>
+
+			<div class="row  d-flex justify-content-center align-items-center">
+				<div class="col-auto">
+					<div
+						class=" card border-0 ab justify-content-center align-items-center">
+						<div class="card abc border-0">
+						<div data-aos="fade-zoom-in">
+							<img class="img-fluid " th:src="@{/imagenes/dueño.jpeg}" alt="" />
+							</div>
+							<div class="card-body  text-center">
+								<a class="btn btn-block create-account size_type" th:href ="@{/owner/irRegistrar}">Dueño</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-auto">
+					<div class="card abcd border-0">
+						<div class="outer">
+							<div class="inner"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-auto">
+					<div
+						class=" card border-0 ab justify-content-center align-items-center">
+						<div class="card abc border-0 ">
+						<div data-aos="fade-zoom-in">
+							<img class="img-fluid" th:src="@{/imagenes/paseador.jpeg}" alt="" />
+							</div>
+							<div class="card-body  text-center">
+								<a class="btn btn-block create-account size_type" th:href ="@{/walker/irRegistrar}">Paseador</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<a  class="btn btn-block" th:href="@{/pantalla/inicio}">Volver</a>
+			</div>
+
+
+		</form>
+	</div>
+
+
+<script th:src="@{/js/aos.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.js}"></script>
+<script th:src="@{/js/glightbox.js}"></script>
+<script th:src="@{/js/isotope.pkgd.js}"></script>
+<script th:src="@{/js/validate.js}"></script>
+<script th:src="@{/js/swiper-bundle.min.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+	
+</body>
+
+</html>

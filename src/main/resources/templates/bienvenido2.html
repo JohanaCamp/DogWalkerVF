@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8"></meta>
+<title>Dog Walker</title>
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+
+<link rel="stylesheet" th:href="@{/css/aos.css}" />
+
+</head>
+
+<body>
+	<div th:replace="fragments/header :: header"></div>
+	<div class="jumbotron bg-portada" id="start">
+		<div class="black-filter">
+
+			<h1 class="display-4">Pasear perros es lo que hacemos</h1>
+			<br></br>
+			<h4 class="display-8">La felicidad no se compra, se saca a
+				pasear</h4>
+
+		</div>
+	</div>
+	<section id="a" class="container">
+		<h1 class="display-7">Dale a tu mascota lo que necesita</h1>
+		<h4 class="display-4">El paseo es una de las actividades más
+			importantes para tu mascota.</h4>
+		<div class="row">
+			<div class="card col-lg-4" data-aos="flip-up">
+				<img th:src="@{/imagenes/huellas.png}" class="card-img-top border-0"
+					alt="Card image cap" />
+				<h4 class="display-7">Ejercicio</h4>
+				<div class="row"></div>
+			</div>
+			<div class="card col-lg-4" data-aos="flip-up">
+				<img th:src="@{/imagenes/dialago.png}" class="card-img-top border-0"
+					alt="Card image cap" />
+				<h4 class="display-7">Socialización</h4>
+				<div class="row"></div>
+			</div>
+			<div class="card col-lg-4" data-aos="flip-up">
+				<img th:src="@{/imagenes/calendario.png}"
+					class="card-img-top border-0" alt="Card image cap" />
+				<h4 class="display-7">Rutina</h4>
+				<div class="row"></div>
+			</div>
+
+		</div>
+
+	</section>
+	<div data-aos="flip-left">
+		<img th:src="@{/imagenes/4 mejores tipos de paseo (1).png}"
+			class="aboutimd" width="1000" align="middle" />
+	</div>
+	<section class="container">
+		<h4 class="display-7">Dog Walker te ofrece un servicio de pasea
+			para tus caninos por si no cuentas con el tiempo necesario para sacar
+			a tu mascota al parque, contamos con paseadores en los diversos
+			distritos. Elige el que más te guste y contrátalo online de manera
+			segura</h4>
+	</section>
+	<section id="about" class="container">
+		<h1 class="display-4">¿Cómo te puedes registrar?</h1>
+		<div class="container">
+			<div class="row main justify-content-center">
+				<div class="col-lg-6 p-4">
+					<div class="image-element card-wrapper" data-aos="flip-left">
+						<img th:src="@{/imagenes/owner.jpg}" width="550px">
+						<div class="wrapper">
+							<h4 class="align-center display-7">Dueño</h4>
+							<div class="collapsed-content">
+								<p>Si necesitas contratar a un paseador, registrate como
+									dueño para contratar los servicios.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 p-4">
+					<div class="image-element card-wrapper align-center"
+						data-aos="flip-left">
+						<img th:src="@{/imagenes/walker.jpg}" width="550px">
+						<div class="wrapper">
+
+							<h4 class="align-center display-7">Paseador</h4>
+							<div class="collapsed-content">
+								<p>Si estás buscando brindar servicio de paseo, registrate
+									como paseador para conseguir clientes.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+
+	<div th:replace="fragments/footer :: footer"></div>
+
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

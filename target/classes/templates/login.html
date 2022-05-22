@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+<meta charset="UTF-8"></meta>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+	rel="stylesheet" />
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/css/bootstrap-datetimepicker.min.css}" />
+<link rel="stylesheet" th:href="@{/css/duenoStyles.css}" />
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" th:href="@{/css/aos.css}" />
+</head>
+
+<body>
+	<div class="registration-form" data-aos="fade-right">
+		<form th:action="@{/login}" method="post">
+			<div class="row" align="center">
+				<div class="form-group" align="center">
+					<h1>Ingresar a cuenta</h1>
+				</div>
+			</div>
+
+			<div class="form-icon-c">
+				<img th:src="@{/imagenes/icon-dueno.png}">
+			</div>
+
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<input type="email" class="form-control item" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="40" 
+						name="username"  id="username" autofocus required oninvalid="this.setCustomValidity('Ingrese un correo electrónico válido')"oninput="setCustomValidity('')"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<input type="password" class="form-control item"
+						placeholder="Contraseña" name="password" id="password" size="40"  oninvalid="this.setCustomValidity('Ingrese una contraseña válida')" required oninput="setCustomValidity('')"/>
+
+				</div>
+			</div>
+			<button type="submit" class="btn btn-block create-account">Ingresar</button>
+			<a class="btn btn-block" th:href="@{/pantalla/inicio}">Volver</a>
+			
+			<div align="center" class="col-sm-12">
+			<div class="alert alert-success" th:if="${success != null}"
+				th:text="${success}"></div>
+			<div class="alert alert-danger" th:if="${error != null}"
+				th:text="${error}"></div>
+			<div class="alert alert-info" th:if="${info != null}"
+				th:text="${info}"></div>
+			</div>
+		</form>
+		
+	</div>
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>

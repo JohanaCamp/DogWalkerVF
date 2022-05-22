@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:p="http://primefaces.org/ui">
+
+<head>
+<meta charset="UTF-8"></meta>
+
+
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
+		</script>
+
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+</link>
+
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+		</script>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js">
+		</script>
+
+
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+
+</head>
+
+<body>
+
+	<div th:fragment="header">
+
+		<div class="header-area  ">
+			<div id="sticky-header" class="main-header-area">
+
+
+				<div class="main-menu  d-none d-lg-block ">
+					<nav class="navbar navbar-default  " role="navigation">
+
+
+
+						<div class="navbar-collapse collapse color-header">
+							<ul class="nav navbar-nav ">
+
+
+								<li class="pull-left"><a href="#"><img class="b"
+										th:src="@{/imagenes/logo.png}" width="60" alt=""></a></li>
+
+								<div class="sin">
+									<li class="pull-left"><a th:href="@{/pantalla/inicio}">Inicio</a></li>
+									<li class="pull-left"><a th:href="@{/pantalla/quienessomos}">¿Quiénes somos?</a></li>
+									<li class="pull-left"><a th:href="@{/pantalla/contactanos}">Contáctanos</a></li>
+									<li class="pull-left"><a th:href="@{/walker/irEnterateMas}">Entérate más</a></li>
+									<li class="pull-right"><a th:href ="@{/login}">Iniciar sesión</a></li>
+									<li class="pull-right"><a
+										th:href="@{/pantalla/regitrarSegunUsuario}">Registrarse</a></li>
+								</div>
+
+
+							</ul>
+						</div>
+
+
+					</nav>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<div th:fragment="header_dueno">
+
+		<div class="header-area " th:object="${owner}">
+			<div id="sticky-header" class="main-header-area">
+
+
+				<div class="main-menu  d-none d-lg-block ">
+					<nav class="navbar navbar-default  " role="navigation">
+
+
+
+						<div class="navbar-collapse collapse color-header">
+							<ul class="nav navbar-nav ">
+
+
+								<li class="pull-left"><a href="#"><img class="b"
+										th:src="@{/imagenes/logo.png}" width="60" alt=""></a></li>
+
+
+								<li class="pull-right"><a th:href="@{/owner/menu}"><img
+										class="b"
+										th:src="@{/imagenes/d97bbb08017ac2309307f0822e63d082.png}"
+										width="80" alt=""></a></li>
+								<li class="pull-right"><a
+									th:text="'Bienvenido, ' + ${owner.firstNames}"></a></li>
+
+								<div class="sin">
+									<li class="pull-left"><a th:href="@{/owner/bienvenido}">Inicio</a></li>
+										<li class="pull-left"><a th:href="@{/owner/topPaseadores}">Top paseadores</a></li>
+									<li class="pull-left"><a th:href="@{/owner/tips}">Tips</a></li>
+									<li class="pull-left"><a th:href="@{/owner/noticias}">Noticias</a></li>
+
+								</div>
+
+
+							</ul>
+						</div>
+
+
+					</nav>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div th:fragment="header_paseador">
+
+		<div class="header-area"  th:object="${walker}">
+			<div id="sticky-header" class="main-header-area">
+
+
+				<div class="main-menu  d-none d-lg-block ">
+					<nav class="navbar navbar-default  " role="navigation">
+
+
+
+						<div class="navbar-collapse collapse color-header">
+							<ul class="nav navbar-nav ">
+
+
+								<li class="pull-left"><a href="#"><img class="b"
+										th:src="@{/imagenes/logo.png}" width="60" alt=""></a></li>
+
+								<li class="pull-right"><a th:href="@{/walker/menu}"><img
+										class="b"
+										th:src="@{/imagenes/d97bbb08017ac2309307f0822e63d082.png}"
+										width="80" alt=""></a></li>
+	<li class="pull-right"><a th:text="'Bienvenido, ' + ${walker.firstNames}"></a></li>
+
+								<div class="sin">
+									<li class="pull-left"><a th:href="@{/walker/bienvenido}">Inicio</a></li>
+									<li class="pull-left"><a th:href="@{/walker/consejos}">Consejos</a></li>
+									<li class="pull-left"><a th:href="@{/walker/noticias}">Noticias</a></li>
+									<li class="pull-left"><a th:href="@{/serviceRequest/misPaseos}">Mis paseos</a></li>
+
+								</div>
+
+
+							</ul>
+						</div>
+
+
+					</nav>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	
+	<div th:fragment="header_error">
+
+		<div class="header-area  ">
+			<div id="sticky-header" class="main-header-area">
+
+
+				<div class="main-menu  d-none d-lg-block ">
+					<nav class="navbar navbar-default  " role="navigation">
+
+
+
+						<div class="navbar-collapse collapse color-header">
+							<ul class="nav navbar-nav ">
+
+
+								<li class="pull-left"><a href="#"><img class="b"
+										th:src="@{/imagenes/logo.png}" width="60" alt=""></a></li>
+
+								<div class="sin" style="text-align: left;">
+							
+									<li class="pull-left"><a>Dog Walker</a></li>
+								</div>
+
+
+							</ul>
+						</div>
+
+
+					</nav>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+	
+	
+</body>
+
+</html>

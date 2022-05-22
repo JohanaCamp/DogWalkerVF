@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8"></meta>
+<title>Dog Walker</title>
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+
+<link rel="stylesheet" th:href="@{/css/aos.css}" />
+
+</head>
+
+<body>
+	<div th:replace="fragments/header :: header_paseador"></div>
+	<div class="jumbotron bg-portada5" id="start">
+		<div class="black-filter">
+
+			<h1 class="display-4">Consejos para pasear un perro</h1>
+			<br></br> <br></br>
+
+		</div>
+	</div>
+	<h1 class="display-4">Dispón del equipamiento de paseo adecuado</h1>
+	<div data-aos="zoom-out-up">
+		<img
+			th:src="@{/imagenes/consecuencias-salgas-pasear-perro_1580252010_139523274_667x375.jpg}"
+			class="aboutimd img-circle" width="900" align="middle" />
+	</div>
+
+	<section class="container">
+		<h4 class="display-7">Lleva agua para ambos si van a realizar una
+			caminata larga. En días de calor, también el perro puede sufrir
+			deshidratación y luego un golpe de calor.</h4>
+
+	</section>
+
+
+	<h1 class="display-4">Edúcalo en la calma durante el paseo</h1>
+	<div data-aos="zoom-out-up">
+		<img
+			th:src="@{/imagenes/la-importancia-de-pasear-al-perro-al-menos-media-hora-dos-veces-al-dia-2.jpg}"
+			class="aboutimd img-circle" width="900" align="middle" />
+	</div>
+
+	<section class="container">
+		<h4 class="display-7">Durante el paseo, de la misma manera que
+			antes de salir, si la calle lo pone tenso, empieza a tironear o a
+			correr queriéndote llevar a ti con él, interrumpe la caminata hasta
+			que se calme. De la misma manera si intenta pelear con otros perros o
+			se abalanza sobre personas que pasan delante de él, detén el paseo,
+			busca siempre calmarlo, mostrarle que es mejor para él estar
+			tranquilo. El adiestramiento de los canes en los paseos es
+			primordial. Y es tu tarea.</h4>
+
+	</section>
+
+
+	<h1 class="display-4">Cómo manejar al perro durante el paseo</h1>
+	<div data-aos="zoom-out-up">
+		<img th:src="@{/imagenes/34M_900.jpg}" class="aboutimd img-circle"
+			width="900" align="middle" />
+	</div>
+	<section class="container">
+		<h4 class="display-7">Recuerda: la correa ni larga ni corta. Sólo
+			un poco holgada para poder controlarlo y permitirle a la vez cierta
+			libertad de movimientos. Trata de iniciar el paseo con una caminata
+			en una zona tranquila. Como te recomendamos antes, asegúrate que el
+			perro comience calmado el paseo. Esto será una buena base para
+			asegurar el éxito de la salida.</h4>
+
+	</section>
+
+
+
+
+
+
+	<div th:replace="fragments/footer :: footer"></div>
+
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    background-color:white;
+}
+
+.navbar{
+    background-color: rgb(240, 170, 91);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    min-height: 100px;
+}
+
+.nav-link{
+    color:white;
+}
+
+.nav-link:hover{
+    color:rgb(248, 121, 17);
+}
+
+.logo-brand{
+    min-width: 120px;
+    max-width: 140px;
+
+}
+
+.navbar-toggler{
+    font-size: 40px;
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}
+
+h1 { font-size: 66px; font-weight: 700; line-height: 80px; }
+h2 { font-size: 48px; margin-bottom: 30px;color:rgb(243, 151, 30);align-items: center; }
+h3 { font-size: 33px; color: rgb(243, 151, 30);align-items: center;}
+h5 { margin-bottom: 0px; }
+p  {font-size: 20px}
+
+
+.content-center {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 5vw;
+    left: 20vw;
+    font-size: 5vw;
+}
+
+#hero {
+	
+   
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 700px;
+    color:#fff;
+}
+
+.paseaPerros {
+    color: white;
+
+}
+
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+.portafolio{
+    align-items: center;
+    max-width: 120px;
+    
+}
+/*container*/
+.row {
+    align-items: center;
+    margin-top:-1;
+    margin-right: -.5;
+    margin-left:-.5;
+}
+
+.container-fluid{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.dd{
+	width:80px;
+}
+
+.c{
+    display:block;
+    margin:auto;
+}
+
+
+.imgWrapper4 {
+    font-size: 0;
+    text-align: center;
+}
+.imgWrapper4 .imgResponsiva {
+    display: inline-block;
+    font-size: inherit;
+}
+.imgWrapper4 .imgResponsiva {width: 65%; max-width: 245px;}
+
+.imgResponsiva img {
+    height: auto;
+    width: 100%;
+}
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8"></meta>
+<title>Dog Walker</title>
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+
+<link rel="stylesheet"
+	th:href="@{/css/aos.css}" />
+
+</head>
+
+<body>
+<div th:replace="fragments/header :: header_dueno"></div>
+		<div class="jumbotron bg-portada4" id="start">
+        <div class="black-filter">
+            
+            <h1 class="display-4">Cuidados para tu mascota</h1> 
+             <br></br>
+             <br></br>
+            
+        </div>
+      </div>
+    <h1 class="display-4">Higiene</h1>
+		<div data-aos="zoom-out-up">
+        <img th:src="@{/imagenes/9129d8294471beb6df9991633e5d35e3_XL.jpg}" class="aboutimd img-circle" width="900" align="middle" />
+        </div>
+ 
+ 	<section class="container">
+        <h4 class="display-7">
+           La higiene de los perros es un asunto de vital importancia, pues está directamente relacionado con su salud. Tenemos que prestar  atención a este aspecto ya que de esta manera protegemos a nuestras mascotas de muchas infecciones y enfermedades.
+           
+                
+        </h4>
+        
+  </section>
+ 	
+  
+    <h1 class="display-4">Atención médica</h1>
+		<div data-aos="zoom-out-up">
+        <img th:src="@{/imagenes/mascotas-preguntas-veterinario-perros-gatos-4.jpg}" class="aboutimd img-circle" width="900" align="middle" />
+        </div>
+        
+ 	<section class="container">
+        <h4 class="display-7">
+           Llevar a tu mascota al veterinario parece estar siempre al final de la lista de prioridades. No es hasta que el perro decide dejar de comer o el gato tiene una mala caída que decidimos ponerlo en la jaula y llevarlo de emergencia, para entonces tener que lidiar con gastos médicos astronómicos y una situación tan delicada para tu mascota que destruye tus nervios.
+           Si amas a tu mascota y te importa realmente el bienestar de los animales, debes hacer todo lo que esté a tu alcance para evitarles sufrimiento. 
+           
+        </h4>
+        
+  </section>
+ 	
+ 	
+ 	<h1 class="display-4">Alimentación</h1>
+		<div data-aos="zoom-out-up">
+        <img th:src="@{/imagenes/perro_comida.jpg}" class="aboutimd img-circle" width="900" align="middle"/>
+        </div>
+     <section class="container">
+        <h4 class="display-7">
+          Es importante recordar que todos los perros son individuos y una dieta que puede ser buena para la mascota de tu amigo puede ser completamente inapropiada para la tuya. Cuando se trata de una dieta diaria, es importante que primero consultes con tu veterinario.
+          Aunque los perros domesticados son en gran parte carnívoros, pueden comen ciertos alimentos que suelen comer los animales omnívoros. 
+           
+        </h4>
+        
+  </section>    
+ 	
+       
+          
+            
+              
+        
+<div th:replace="fragments/footer :: footer"></div>
+
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

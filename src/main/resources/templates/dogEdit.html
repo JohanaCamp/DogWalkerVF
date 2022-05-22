@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<head>
+<meta charset="UTF-8"></meta>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+	rel="stylesheet" />
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/css/bootstrap-datetimepicker.min.css}" />
+<link rel="stylesheet" th:href="@{/css/duenoStyles.css}" />
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" th:href="@{/css/aos.css}" />
+
+</head>
+
+<body>
+	<div class="registration-form" data-aos="fade-right">
+		<form th:action="@{/dog/registrar}" method="post" th:object="${dog}">
+			<div class="row">
+				<div class="form-group">
+					<h1>Editar a tu mascota</h1>
+				</div>
+			</div>
+			<div class="form-icon-c">
+				<img th:src="@{/imagenes/icoMascota.png}">
+			</div>
+			<div class="form-group">
+
+				<input type="hidden" class="form-control item " placeholder="ID"
+					th:field="*{idDog}"></input> <input type="text"
+					class="form-control item" placeholder="Nombre" th:field="*{name}"
+					th:errorclass="'form-control alert-danger'" /> <small
+					class="form-text text-danger" th:if="${#fields.hasErrors('name')}"
+					th:errors="*{name}"></small>
+			</div>
+			<div class="form-group">
+				<div class=" form group date" id="id_0">
+					<input type="date" class="form-control itemselect"
+						placeholder="Fecha de nacimiento" th:field="*{dateOfBirth}"
+						th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('dateOfBirth')}"
+						th:errors="*{dateOfBirth}"></small>
+				</div>
+			</div>
+
+			<div class="form-group">
+
+				<select class="form-control itemselect" th:field="*{Race.idRace}">
+					<option th:each="d: ${listaRaza}" th:value="${d.idRace}"
+						th:text="${d.name}" th:selected="(${d.idRace}==*{Race.idRace})">
+					</option>
+				</select>
+
+			</div>
+			<div class="form-group">
+
+				<select class="form-control itemselect"
+					th:field="*{Character.idCharacter}">
+					<option th:each="d: ${listaCaracter}" th:value="${d.idCharacter}"
+						th:text="${d.name}"
+						th:selected="(${d.idCharacter}==*{Character.idCharacter})">
+					</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<textarea type="text" class="form-control item" rows="3"
+					placeholder="Descripción" th:field="*{description}"></textarea>
+			</div>
+			<button type="submit" class="btn btn-block create-account">Guardar
+				cambios</button>
+			<a class="btn btn-block" th:href="@{/dog/listarCanes}">Volver</a>
+		</form>
+	</div>
+
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+.pagination-container .pagination li span {
+  color:#5A352C;
+  background-color:#FFE4B5;
+}
+
+.pagination-container .pagination li span:hover {
+  color:#FFE4B5;
+  background-color:#5A352C;
+}
+
+
+
+.pagination>li.active> span {
+  background: #5A352C;
+  color: #ECA766;
+}

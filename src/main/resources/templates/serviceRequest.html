@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<head>
+<meta charset="UTF-8"></meta>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"	rel="stylesheet" />
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet"	th:href="@{/css/bootstrap-datetimepicker.min.css}" />
+<link rel="stylesheet" th:href="@{/css/duenoStyles.css}" />
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet"	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" th:href="@{/css/aos.css}" />	
+</head>
+
+<body>
+	<div class="registration-form" data-aos="fade-right">
+		<form th:action="@{/serviceRequest/registrar}" method="post"
+			th:object="${serviceRequest}">
+			<div class="row">
+				<div class="form-group">
+					<h1>Solicitud</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<div class=" form group date" id="id_0">
+						<input type="text" class="form-control itemselect"
+							placeholder="Fecha de servicio" onfocus="(this.type='date')" th:field="*{dateService}" th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('dateService')}"
+						th:errors="*{dateService}"></small>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="row">
+				<div class="form-group col-sm-6">
+					<input type="text" class="form-control item"
+						placeholder="Hora inicio de recojo" th:field="*{startTime}" th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('startTime')}"
+						th:errors="*{startTime}"></small>
+				</div>
+				<div class="form-group col-sm-6">
+					<input type="text" class="form-control item" placeholder="Hora límite de recojo"
+						th:field="*{timeLimit}" th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('timeLimit')}"
+						th:errors="*{timeLimit}"></small>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="form-group col-sm-12">
+
+					<select th:class="${claseTime}" th:field="*{Time}" required>
+						<option th:value="0"   selected>Tiempo de paseo</option>					
+						<option th:each="t: ${listTimes}" th:value="${t.idTime}"
+							th:text="${t.time}" th:selected="(${t}==*{Time})">
+						</option>
+					</select>
+					<small class="form-text text-danger" th:text="${mensajeTime}"></small>
+
+				</div>
+
+			</div>
+
+			
+
+			<button type="submit" class="btn btn-block create-account">Crear Solicitud</button>
+			<a class="btn btn-block" th:href="@{/serviceRequest/ListaPaseadores}">Volver</a>
+		</form>
+
+	</div>
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+web: java -Dspring.profiles.active -Dserver.port=$PORT -jar target/*.war

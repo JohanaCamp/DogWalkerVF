@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<head>
+<meta charset="UTF-8"></meta>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+	rel="stylesheet" />
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/css/bootstrap-datetimepicker.min.css}" />
+<link rel="stylesheet" th:href="@{/css/duenoStyles.css}" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+
+<body>
+	<div class="Main-container">
+		<div class="container-register">
+			<div class="wrap-register">
+
+
+
+				<a class="btn btn-block create-account"
+					th:href="@{/walker/modificar}">Editar Perfil</a> <a
+					class="btn btn-block create-account"
+					th:href="@{/serviceRequest/listarSolicitudesPaseador}">Solicitudes</a>
+						<a class="btn btn-block create-account" th:href="@{/walker/Comentarios}">Comentarios</a>
+				<a class="btn btn-block create-account" th:href="@{/walker/inicio}">Cerrar
+					Sesion</a>
+					
+				<a  class="btn btn-block" th:href="@{/walker/bienvenido}">Volver</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

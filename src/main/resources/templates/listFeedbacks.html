@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<head>
+<meta charset="UTF-8"></meta>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" th:href="@{/css/styleTable.css}" />
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+<link rel="stylesheet" th:href="@{/css/styleFeedback.css}" />
+<link rel="stylesheet" th:href="@{/css/header.css}" />
+<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+<link rel="stylesheet" th:href="@{/css/styleTable.css}" />
+<link rel="stylesheet" th:href="@{/css/stylePagination.css}" />
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+</head>
+
+<body>
+	<div th:replace="fragments/header :: header_dueno"></div>
+
+	<div class="container">
+		<form id="myform">
+			<div class="container-lg">
+				<div class="table-responsive">
+					<div class="table-wrapper">
+						<div class="table-title">
+							<div class="row">
+								<div class="col-sm-5">
+									<h2 class="box-head">
+										<b>Comentarios</b>
+									</h2>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<select class="form-control" name="state" id="maxRows"
+								style="display: none">
+								<option value="5000">Show ALL Rows</option>
+								<option value="5">5</option>
+
+							</select>
+
+						</div>
+
+						<table class="table table-striped table-hover">
+							<thead class="table-head">
+								<tr>
+									<th class="text-center">Puntuación</th>
+									<th class="text-center">Comentario</th>
+									<th class="text-center">Dueño</th>
+									<th class="text-center">Paseador</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="f: ${listaFeedbacks}">
+									<td style="text-align: center" th:text="${f.rating}"></td>
+									<td th:text="${f.comment}"></td>
+									<td style="text-align: center" th:text="${f.owner.firstNames}"></td>
+									<td style="text-align: center" th:text="${f.walker.firstNames}"></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class='pagination-container'>
+							<nav>
+								<ul class="pagination">
+
+									<li data-page="prev"><span> < <span class="sr-only">(current)</span></span></li>
+
+									<li data-page="next" id="prev"><span> > <span
+											class="sr-only">(current)</span></span></li>
+								</ul>
+							</nav>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="registration-form">
+		<form th:action="@{/feedback/Crear}" method="post"
+			th:object="${Feedback}">
+
+			<div class="row">
+				<div class="form-group col-12 col-md-8">
+					<div class="form-group">
+						<textarea th:class="${claseComentario}" rows="3"
+							placeholder="Comentario" th:field="*{comment}"
+							th:errorclass="'form-control alert-danger'"></textarea>
+						<small class="form-text text-danger" th:text="${mensajeComentario}"></small>
+
+					</div>
+					<select class="form-control item effectfeedback" name="puntuacion"
+						th:field="*{rating}">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+
+					</select>
+				</div>
+
+
+				<div class="form-group col-6 col-md-4">
+					<button type="submit" class="btn btn-block create-account">Crear
+						comentario</button>
+					<a class="btn btn-block" th:href="@{/feedback/ListaPaseadores}">Volver</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+
+	<div th:replace="fragments/footer :: footer"></div>
+	<script th:src="@{/js/pagination.js}"> </script>
+</body>
+</html>

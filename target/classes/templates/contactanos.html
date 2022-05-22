@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+	<meta charset="UTF-8"></meta>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+	<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+	<link rel="stylesheet" th:href="@{/css/styles2.css}" />	
+	<link rel="stylesheet"
+	th:href="@{/css/aos.css}" />
+			
+	</head>
+
+	<body>
+<div th:replace="fragments/header :: header"></div>
+			
+  	<section class="container" id="contact">
+            <h1 class="display-4">Contáctanos</h1> 
+            <h4 class="display-7">
+                Para más información contactenos por los siguientes medios:
+            </h4>
+            <h4 class="display-7">
+                Email: DogWalker.info@hotmail.com
+            </h4>
+            <h4 class="display-7">
+                Número de contactos: 981723956
+            </h4>
+            <div data-aos="zoom-in-up">
+        		<img th:src="@{/imagenes/morning-walk-with-dog-at-the-sunrise-P5JG3U7.jpg}" class="aboutimd" width="1000" align="middle"/>
+        	</div>
+        	<h4 class="display-7">
+            	Trata bien a un perro y él te tratará bien.
+       	 	</h4>
+       	 
+        </section>
+      
+    	
+	<div th:replace="fragments/footer :: footer"></div>	
+	
+	
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>	
+	</body>
+	
+</html>

@@ -1,0 +1,304 @@
+* body{    
+    font-family: 'Poppins', sans-serif;
+    background-color:#fff;
+}
+
+.head-nav{
+    padding:10px 40px ;
+    background-color: #eb9956ed;
+}
+
+.jumbotron.bg-portada{
+    text-align: center;
+    padding: 0px !important;
+}
+
+.logo-brand{
+    min-width: 120px;
+    max-width: 140px;
+
+}
+
+.nav-item{
+    margin: 0px 40px;
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:#f1852d;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #f1852d;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+.row
+{
+    place-content: space-between;
+    padding: 0px 10px;
+    
+}
+.display-4{
+    font-weight: 600 !important;
+    padding: 10px;
+    color:rgb(238, 152, 39);
+    text-align: center;
+}
+
+
+.display-7{
+    font-weight: 600 !important;
+    padding: 10px;
+    text-align: center;
+}
+.display-6{
+    padding: 15px;
+}
+
+.display-8{
+    font-weight: 600 !important;
+    padding: 10px;
+    text-align: center;
+    color:rgb(218, 118, 47);
+}
+
+.aboutimd{
+    margin: auto;
+    display: block;
+}
+.card{
+    min-width: 250px !important;
+}
+.lead{
+    margin-top: 30px;
+}
+
+.bg-portada{
+    background: url(https://gestion.portalbiesa.com/redaccio/arxius/imatges/201902/1200_1549555175blog_post_pasear_perro_2.jpg);
+    background-size: cover;
+}
+.bg-portada2{
+    background: url(https://s03.s3c.es/imag/_v0/770x420/c/5/5/Perro-mujer-joven-san-bernardo-iStock.jpg);
+    background-size: cover;
+}
+.bg-portada3{
+    background: url(https://estaticos.muyinteresante.es/uploads/images/gallery/5a7880fc5cafe862073c9869/perro-paseando-campo-redes.jpg);
+    background-size: cover;
+}
+
+.bg-portada4{
+    background: url(https://www.purina-latam.com/sites/g/files/auxxlc391/files/purina-brand-hasta-que-edad-son-cachorros-los-perros.jpg);
+    background-size: cover;
+}
+
+.bg-portada5{
+    background: url(https://cdn.wamiz.fr/cdn-cgi/image/quality=80,width=1200,height=675,fit=cover/https://cdn.wamiz.fr/article/main-picture/5f3ba4e6cdd75898705821.jpg);
+    background-size: cover;
+}
+
+.bg-portada6{
+    background: url(https://playfm.cl/playfm/site/artic/20190907/imag/foto_0000001220190907153247/happy-dog-owner-field-ftr.jpg);
+    background-size: cover;
+}
+
+.card.col-lg-2{
+    margin: 10px; 
+    
+    padding: 0px;
+}
+
+
+.card-title{
+    color: white;
+    font-size: 20px;
+}
+
+
+footer {
+    padding: 80px 0;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+    background-color:#eb9956ed;
+    display: block;
+    position:absolute;
+    height:100px;
+    width:100%;
+
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+footer .list-inline .list-inline-item {
+    padding: 10px 15px;
+   
+}
+a{
+    cursor: pointer;
+}
+.btns{
+    align-self: center;
+    text-align: center;
+    
+}
+.btns a{
+ display: block;
+ margin: 15px;
+
+}
+.circle{
+    border-radius: 50px !important;
+
+}
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 60px;
+    border-radius: 120px;
+    margin: 0 auto;
+  }
+.card div{
+    flex-wrap: inherit;
+}
+.container{
+    margin-top: 40px;
+}
+
+p{
+   color: #000; 
+   padding: 10px;
+   text-align: center;
+}
+.black-filter{
+    padding: 6rem 3rem;
+    background:linear-gradient(118deg, rgba(0,0,0,0.9555419579941351) 5%, rgba(0,0,0,0.9555419579941351) 11%, rgba(0,0,0,0.5409761316636029) 49%);
+}
+.black-filter h1{
+    color: white;
+}
+.black-filter p{
+    color:#000;
+}
+
+.df{
+	align-items:center;
+}
+
+
+
+.buscador_distrito {
+	float:none;
+	margin:auto;
+	 width:40%;
+	 
+}
+
+.radius_distrito {
+	border-radius: 130px;
+	 
+}
+.services {
+  padding-bottom: 40px;
+}
+.services .card {
+  border: 0;
+  padding: 0 30px;
+  margin-bottom: 60px;
+  position: relative;
+  background: transparent;
+}
+.services .card-img {
+  width: calc(100% + 60px);
+  margin-left: -30px;
+  overflow: hidden;
+  z-index: 9;
+  border-radius: 0;
+}
+.services .card-img img {
+  max-width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.services .card-body {
+  z-index: 10;
+  background: #fff;
+  border-top: 4px solid #fff;
+  padding: 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+  transition: 0.3s;
+}
+.services .card-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  padding:25px
+}
+.services .card-title a {
+  color: orange;
+  transition: 0.3s;
+}
+.services .card-text {
+  color: #5e5e5e;
+}
+.services .read-more a {
+  color: #777777;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.services .read-more a:hover {
+  color: #fdc134;
+}
+.services .card:hover img {
+  transform: scale(1.1);
+}
+.services .card:hover .card-body {
+  border-color: #fdc134;
+}
+.services .card:hover .card-body .card-title a {
+  color: #fdc134;
+
+}

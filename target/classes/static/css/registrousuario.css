@@ -1,0 +1,28 @@
+
+.outer {
+    width: 10px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.inner {
+    position: absolute;
+    width:1%;
+    height: 50%;
+    background: black;
+    top: 20%;
+    box-shadow: 0px 0px 30px 20px grey;
+}
+
+.abc {
+
+    width: 300px;
+
+}
+
+.abcd {
+
+    width: 200px;
+
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+<meta charset="UTF-8"></meta>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Solicitudes</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" th:href="@{/css/styleTable.css}" />
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+<link rel="stylesheet" th:href="@{/css/header.css}" />
+<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+<link rel="stylesheet" th:href="@{/css/styleTable.css}" />
+<link rel="stylesheet" th:href="@{/css/stylePagination.css}" />
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+</head>
+<body>
+	<div th:replace="fragments/header :: header_dueno"></div>
+	<div class="container">
+		<form id="myform">
+			<div class="container-xl">
+				<div class="table-responsive">
+					<div class="table-wrapper">
+						<div class="table-title">
+							<div class="row">
+								<div class="col-sm-5">
+									<h2 class="box-head">
+										<b>Solicitudes</b>
+									</h2>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<select class="form-control" name="state" id="maxRows"
+								style="display: none">
+								<option value="5000">Show ALL Rows</option>
+								<option value="5">5</option>
+
+							</select>
+
+						</div>
+
+						<table class="table table-striped table-hover">
+							<thead class="table-head">
+								<tr>
+									<th class="text-center">Fecha de Servicio</th>
+									<th class="text-center">Hora inicio de recojo</th>
+									<th class="text-center">Hora límite de recojo</th>
+									<th class="text-center">Tiempo</th>
+									<th class="text-center">Paseador</th>
+									<th class="text-center">Monto</th>
+									<th class="text-center">Estado</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="o: ${listServiceRequestByOwner}">
+									<td style="text-align: center" th:text="${o.dateService}"></td>
+									<td style="text-align: center" th:text="${o.startTime}"></td>
+									<td style="text-align: center" th:text="${o.timeLimit}"></td>
+									<td style="text-align: center" th:text="${o.time.time}"></td>
+									<td style="text-align: center" th:text="${o.walker.firstNames}"></td>
+									<td style="text-align: center"
+										th:text="'S/. ' + ${o.totalServiceCost}"></td>
+									<td style="text-align: center" th:text="${o.status.name}"></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class='pagination-container'>
+							<nav>
+								<ul class="pagination">
+
+									<li data-page="prev"><span> < <span class="sr-only">(current)</span></span></li>
+
+									<li data-page="next" id="prev"><span> > <span
+											class="sr-only">(current)</span></span></li>
+								</ul>
+							</nav>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div th:replace="fragments/footer :: footer"></div>
+	<script th:src="@{/js/pagination.js}"> </script>
+</body>
+</html>

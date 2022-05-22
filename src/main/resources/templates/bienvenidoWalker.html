@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ >
+
+	<head>
+	
+		<meta charset="UTF-8"></meta>
+		<title>Dog Walker</title>
+		
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+<link rel="stylesheet"
+	th:href="@{/css/aos.css}" />
+		
+	</head>
+
+	<body>
+    	<div th:replace="fragments/header :: header_paseador"></div>
+    	<div class="jumbotron bg-portada3" id="start">
+        <div class="black-filter">
+            
+            <h1 class="display-4">Jugar con perros adorables no suena como un trabajo...</h1> 
+             <br></br>
+            <br></br>
+             
+        </div>
+      </div>
+    	<section id="a" class="container">
+        <h1 class="display-7">¿Por qué pasear perros?</h1>
+        
+        <div class="row">
+            <div class="card col-lg-4" data-aos="flip-up">
+                <img th:src="@{/imagenes/outside.png}" class="card-img-top border-0" alt="Card image cap"/>
+                <h4 class="display-7">Aire libre</h4>
+                <div class="row">               
+                </div>
+              </div>
+            <div class="card col-lg-4" data-aos="flip-up">
+                <img th:src="@{/imagenes/house.png}" class="card-img-top border-0" alt="Card image cap"/>
+                <h4 class="display-7">Desde tu casa</h4>
+                <div class="row">
+                </div>
+              </div>
+              <div class="card col-lg-4" data-aos="flip-up">
+                <img th:src="@{/imagenes/reloj.png}" class="card-img-top border-0" alt="Card image cap"/>
+                <h4 class="display-7">Independencia</h4>
+                <div class="row">
+                </div>
+              </div>
+              
+            </div>
+           
+</section>
+		<h1 class="display-4">¿Por qué pasear a un canino?</h1>
+		<div data-aos="flip-left">
+        <img th:src="@{/imagenes/Q2EDZSXEI5HGTKXDHXEAQYMH5A.jpg}" class="aboutimd" width="1000" align="middle"/>
+        </div>
+  <section class="container">
+        <h4 class="display-7">
+           No solo la mascota obtendrá buenos resultados, sino que tú también te ejercitaras junto a él. Además podrás ganar dinero divirtiéndote con el can, no sentiras que es un trabajo.
+           
+        </h4>
+        
+  </section>
+    	<div th:replace="fragments/footer :: footer"></div>
+    	
+  	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+	
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+	<meta charset="UTF-8"></meta>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+	<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+	<link rel="stylesheet" th:href="@{/css/styles2.css}" />	
+	<link rel="stylesheet"
+	th:href="@{/css/aos.css}" />
+			
+	</head>
+
+	<body>
+	<div th:replace="fragments/header :: header"></div>
+			
+  	<section id="about" class="container">
+        	<h1 class="display-4">¿Quiénes somos?</h1>
+        	<h4 class="display-7">
+            	Somos un grupo de estudiantes, amantes de los caninos que buscan ofrecer una solución para los dueños de las mascotas que no cuentan con el tiempo suficiente para sacarlos a pasear. Con nuestro servicio podrán buscar un paseador de acuerdo a sus necesidades para que pueda sacar a su perro/s y que se sientan seguro de que su mascota está en buenas manos.
+       	 	</h4>
+        	<div data-aos="zoom-in-up">
+        		<img th:src="@{/imagenes/paseador-de-perros.jpg}" class="aboutimd" width="1000" align="middle"/>
+        	</div>
+        	<h4 class="display-7">
+            	Trata bien a un perro y él te tratará bien.
+       	 	</h4>
+  	</section>
+      
+    	
+	<div th:replace="fragments/footer :: footer"></div>		
+	
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+	</body>
+	
+</html>

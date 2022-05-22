@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+	<meta charset="UTF-8"></meta>
+	<link
+		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css">
+	</link>
+	<link rel="stylesheet" th:href="@{/css/styles2.css}" />
+	<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+		</script>
+			
+			
+			
+			
+			
+	</head>
+
+	<body>
+	<div th:fragment="content">
+		<div class="jumbotron bg-portada6" id="start">
+        <div class="black-filter">
+            
+            <h1 class="display-4">Noticias</h1> 
+             <br></br>
+             <br></br>
+            
+        </div>
+      </div>
+      
+    <section id="services" class="services section-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img th:src="@{/imagenes/inclinado.jpg}" alt="...">
+              </div>
+              <div class="card-body">
+                <h1 class="card-title"><a href="">¿Tu perro inclina la cabeza cuando le hablas?</a></h1>
+                <p class="card-text">Cuando un perro inclina la cabeza cuando hablas es porque está haciendo todo lo posible por entender.</p>
+                <div class="read-more"><a href="https://www.elconfidencial.com/alma-corazon-vida/2021-11-08/perros-inclinacion-cabeza-comportamiento_3318415/"><i class="bi bi-arrow-right"></i> Saber más</a></div>
+              </div>
+            </div>
+          </div>
+          
+            <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img th:src="@{/imagenes/cachorro.jpg}" alt="...">
+              </div>
+              <div class="card-body">
+                <h1 class="card-title"><a href="">¿Hasta que edad crecen los perros?</a></h1>
+                <p class="card-text">Te contamos a qué edad dejan de crecer los perros y los trucos para saber si un perro es de raza grande o pequeña.</p>
+                <div class="read-more"><a href="https://www.informacion.es/vida-y-estilo/mascotas/2021/11/09/perros-hasta-que-edad-crecen-59200838.html"><i class="bi bi-arrow-right"></i> Saber más</a></div>
+              </div>
+            </div>
+          </div>
+          
+            <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img th:src="@{/imagenes/mo.jpg}" alt="...">
+              </div>
+              <div class="card-body">
+                <h1 class="card-title"><a href="">Los tres ruidos que más molestan a los perros</a></h1>
+                <p class="card-text">Conoce los sonidos que más detesta tu mascota e intenta evitarlos para que el animal esté más tranquilo.</p>
+                <div class="read-more"><a href="https://www.informacion.es/vida-y-estilo/mascotas/2021/11/08/tres-ruidos-molestan-perros-59051660.html"><i class="bi bi-arrow-right"></i> Saber más</a></div>
+              </div>
+            </div>
+          </div>
+          
+            <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img th:src="@{/imagenes/perro-schafer.jpg}" alt="...">
+              </div>
+              <div class="card-body">
+                <h1 class="card-title"><a href="">¿Tu perro no te hace caso?</a></h1>
+                <p class="card-text">No te preocupes, nunca es tarde para enseñarles.No pretendas que tu perro te obedezca si no le enseñas. Los siguientes consejos lograrán que la relación con tu mascota sea más armoniosa.</p>
+                <div class="read-more"><a href="https://elcomercio.pe/somos/estilo/mascotas-tu-perro-no-te-hace-caso-no-te-preocupes-nunca-es-tarde-para-ensenarles-adiestramiento-bienestar-hogar-noticia/?ref=ecr"><i class="bi bi-arrow-right"></i> Saber más</a></div>
+              </div>
+            </div>
+          </div>
+          
+      	</div>
+      	</div>
+    </section>
+ 	</div>
+		
+	</body>
+	
+</html>

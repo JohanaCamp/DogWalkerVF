@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+	<meta charset="UTF-8"></meta>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.version.2.css}" />
+	<link rel="stylesheet" th:href="@{/css/header.css}" />
+
+	<link rel="stylesheet" th:href="@{/css/styles2.css}" />	
+	<link rel="stylesheet"
+	th:href="@{/css/aos.css}" />
+			
+	</head>
+
+	<body>
+	<div th:replace="fragments/header :: header_error"></div>
+			
+  	<section id="about" class="container">
+        	<h1 class="display-4"> Los sentimos, ocurrió un problema</h1>
+     
+  
+       	 	<a  class="btn btn-block" href="javascript: history.go(-1)" >Volver</a>
+        	
+        	<div data-aos="zoom-in-up">
+        		<img th:src="@{/imagenes/perro-triste-1920-1.jpg}" class="aboutimd" width="1000" align="middle"/>
+        	</div>
+        	<br>
+  	</section>
+      
+    	
+	<div th:replace="fragments/footer :: footer"></div>		
+	
+	<script th:src="@{/js/aos.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/js/glightbox.js}"></script>
+	<script th:src="@{/js/isotope.pkgd.js}"></script>
+	<script th:src="@{/js/validate.js}"></script>
+	<script th:src="@{/js/swiper-bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+	</body>
+	
+</html>
