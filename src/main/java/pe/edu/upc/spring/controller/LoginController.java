@@ -56,11 +56,11 @@ public class LoginController {
 		}
 
 		if (error != null) {
-			model.addAttribute("error",	"Error en el login: Correo o contraseña incorrecta, por favor vuelva a intentarlo.");
+			model.addAttribute("error",	"Error en el login: Correo o contraseÃ±a incorrecta, por favor vuelva a intentarlo.");
 		}
 
 		if (logout != null) {
-			model.addAttribute("success", "Ha cerrado sesiónn con éxito!");
+			model.addAttribute("success", "Ha cerrado sesiÃ³nn con Ã‰xito!");
 			return "redirect:/pantalla/inicio";
 		}
 

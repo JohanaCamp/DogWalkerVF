@@ -34,22 +34,22 @@ public class Walker implements Serializable {
 	private int idWalker;
 
 	@NotEmpty(message = "Ingrese su nombre")
-	@Size(max=50, message = "Ingrese un nombre válido")
+	@Size(max=50, message = "Ingrese un nombre valido")
 	@Column(name = "firstNames", length = 50, nullable = false)
 	private String firstNames;
 
 	@NotEmpty(message = "Ingrese su apellido")
-	@Size(max=50, message = "Ingrese un apellido válido")
+	@Size(max=50, message = "Ingrese un apellido vï¿½lido")
 	@Column(name = "lastNames", length = 50, nullable = false)
 	private String lastNames;
 
 	@NotEmpty(message = "Ingrese su correo")
-	@Size(max=40, message = "Ingrese el correo electrónico correcto")
-	@Email (message = "Ingrese el correo electrónico correcto")
+	@Size(max=40, message = "Ingrese el correo electronico correcto")
+	@Email (message = "Ingrese el correo electrï¿½nico correcto")
 	@Column(name = "email", length = 40, nullable = false)
 	private String email;
 	
-	@NotEmpty(message = "Ingrese su contraseña")
+	@NotEmpty(message = "Ingrese su contraseÃ±a")
 	@Column(name = "password", length = 255, nullable = false)//15 no alcanza con la data de prueba por el security
 	private String password;
 
@@ -60,7 +60,7 @@ public class Walker implements Serializable {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dateOfBirth;
 
-	@NotEmpty(message = "Ingrese su descripción")
+	@NotEmpty(message = "Ingrese su descripcion")
 	@Size(max=255, message = "Solo se permite 255 caracteres")
 	@Column(name = "description", length = 255, nullable = false)
 	private String description;
@@ -70,7 +70,7 @@ public class Walker implements Serializable {
 	@Column(name = "costService", nullable = false)
 	private double costService;
 
-	@NotEmpty(message = "Ingrese su dirección")
+	@NotEmpty(message = "Ingrese su direccion")
 	@Size(max=150, message = "Solo se permite 150 caracteres")
 	@Column(name = "address", length = 150, nullable = false)
 	private String address;
