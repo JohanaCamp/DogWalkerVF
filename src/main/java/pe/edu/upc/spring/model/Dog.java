@@ -31,7 +31,7 @@ public class Dog implements Serializable {
 	private int idDog;
 
 	@NotEmpty(message = "Ingrese nombre")
-	@Size(max=50, message = "Ingrese un nombre valido")
+	@Size(max=50, message = "Ingrese un nombre válido")
 	@Column(name = "name", length = 50, nullable = false)
 	private String name;
 	
