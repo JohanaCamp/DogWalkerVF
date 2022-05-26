@@ -35,10 +35,8 @@ public class LoginController {
 	public String login(@RequestParam(value = "error", required = false) String error,@RequestParam(value = "username", required = false) String username,
 			@RequestParam(value = "logout", required = false) String logout, Model model, Principal principal,
 			RedirectAttributes flash ) {
-		System.out.print("***Login controller***");
 
 		if (principal != null) {
-			System.out.print("***Login principal ***");
 			Owner owner = new Owner();
 			owner = oService.findByEmail(principal.getName());
 			if(owner==null) {
