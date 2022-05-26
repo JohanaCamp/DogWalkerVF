@@ -31,22 +31,22 @@ public class Owner implements Serializable {
 	private int idOwner;
 
 	@NotEmpty(message = "Ingrese su nombre")
-	@Size(max=50, message = "Ingrese un nombre válido")
+	@Size(max=50, message = "Ingrese un nombre valido")
 	@Column(name = "firstNames", length = 50, nullable = false)
 	private String firstNames;
 
 	@NotEmpty(message = "Ingrese su apellido")
-	@Size(max=50, message = "Ingrese un apellido válido")
+	@Size(max=50, message = "Ingrese un apellido valido")
 	@Column(name = "lastNames", length = 50, nullable = false)
 	private String lastNames;
 	
 	@NotEmpty(message = "Ingrese su correo")
-	@Size(max=40, message = "Ingrese el correo electrónico correcto")
-	@Email (message = "Ingrese el correo electrónico correcto")
+	@Size(max=40, message = "Ingrese el correo electronico correcto")
+	@Email (message = "Ingrese el correo electronico correcto")
 	@Column(name = "email", length = 40, nullable = false)
 	private String email;
 
-	@NotEmpty(message = "Ingrese su contraseña")
+	@NotEmpty(message = "Ingrese su contraseÃ±a")
 	@Column(name = "password", length = 255, nullable = false)
 	private String password;
 
@@ -62,7 +62,7 @@ public class Owner implements Serializable {
 	@JoinColumn(name = "idDistrict", nullable = false)
 	private District district;
 
-	@NotEmpty(message = "Ingrese su dirección")
+	@NotEmpty(message = "Ingrese su direcciï¿½n")
 	@Size(max=150, message = "Solo se permite 150 caracteres")
 	@Column(name = "address", length = 150, nullable = false)
 	private String address;
