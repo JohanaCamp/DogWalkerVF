@@ -31,11 +31,11 @@ public class Dog implements Serializable {
 	private int idDog;
 
 	@NotEmpty(message = "Ingrese nombre")
-	@Size(max=50, message = "Ingrese un nombre válido")
+	@Size(max=50, message = "Ingrese un nombre valido")
 	@Column(name = "name", length = 50, nullable = false)
 	private String name;
 	
-	@NotEmpty(message = "Ingrese una descripción sobre su mascota")
+	@NotEmpty(message = "Ingrese una descripciÃ³n sobre su mascota")
 	@Size(max=200, message = "Solo se permite 200 caracteres")
 	@Column(name = "description", length = 200, nullable = false)
 	private String description;
