@@ -34,18 +34,18 @@ public class Walker implements Serializable {
 	private int idWalker;
 
 	@NotEmpty(message = "Ingrese su nombre")
-	@Size(max=50, message = "Ingrese un nombre valido")
+	@Size(max=50, message = "Ingrese un nombre válido")
 	@Column(name = "firstNames", length = 50, nullable = false)
 	private String firstNames;
 
 	@NotEmpty(message = "Ingrese su apellido")
-	@Size(max=50, message = "Ingrese un apellido v�lido")
+	@Size(max=50, message = "Ingrese un apellido válido")
 	@Column(name = "lastNames", length = 50, nullable = false)
 	private String lastNames;
 
 	@NotEmpty(message = "Ingrese su correo")
-	@Size(max=40, message = "Ingrese el correo electronico correcto")
-	@Email (message = "Ingrese el correo electr�nico correcto")
+	@Size(max=40, message = "Ingrese el correo electrónico correcto")
+	@Email (message = "Ingrese el correo electrónico correcto")
 	@Column(name = "email", length = 40, nullable = false)
 	private String email;
 	
@@ -60,7 +60,7 @@ public class Walker implements Serializable {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dateOfBirth;
 
-	@NotEmpty(message = "Ingrese su descripcion")
+	@NotEmpty(message = "Ingrese su descripción")
 	@Size(max=255, message = "Solo se permite 255 caracteres")
 	@Column(name = "description", length = 255, nullable = false)
 	private String description;

@@ -31,18 +31,18 @@ public class Owner implements Serializable {
 	private int idOwner;
 
 	@NotEmpty(message = "Ingrese su nombre")
-	@Size(max=50, message = "Ingrese un nombre valido")
+	@Size(max=50, message = "Solo se permite 50 caracteres como máximo")
 	@Column(name = "firstNames", length = 50, nullable = false)
 	private String firstNames;
 
 	@NotEmpty(message = "Ingrese su apellido")
-	@Size(max=50, message = "Ingrese un apellido valido")
+	@Size(max=50, message = "Solo se permite 50 caracteres como máximo")
 	@Column(name = "lastNames", length = 50, nullable = false)
 	private String lastNames;
 	
 	@NotEmpty(message = "Ingrese su correo")
-	@Size(max=40, message = "Ingrese el correo electronico correcto")
-	@Email (message = "Ingrese el correo electronico correcto")
+	@Size(max=40, message = "Ingrese el correo electrónico correcto")
+	@Email (message = "Ingrese el correo electrónico correcto")
 	@Column(name = "email", length = 40, nullable = false)
 	private String email;
 
@@ -51,7 +51,7 @@ public class Owner implements Serializable {
 	private String password;
 
 	@NotNull(message = "Ingrese su fecha de nacimiento")
-	@Past(message = "Fecha de nacimiento incorrecta")
+	@Past(message = "No se permite ingresar una fecha de nacimiento futura")
 	@Temporal(TemporalType.DATE)
 	@Column(name = "dateOfBirth")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -62,8 +62,8 @@ public class Owner implements Serializable {
 	@JoinColumn(name = "idDistrict", nullable = false)
 	private District district;
 
-	@NotEmpty(message = "Ingrese su direcci�n")
-	@Size(max=150, message = "Solo se permite 150 caracteres")
+	@NotEmpty(message = "Ingrese su dirección")
+	@Size(max=150, message = "Solo se permite 150 caracteres como máximo")
 	@Column(name = "address", length = 150, nullable = false)
 	private String address;
 
