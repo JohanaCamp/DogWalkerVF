@@ -88,7 +88,7 @@ public class FeedbackController {
 		model.addAttribute("Feedback", new Feedback());
 		model.addAttribute("owner", sesionOwner);
 		model.addAttribute("claseComentario", "form-control item alert-danger");
-		model.addAttribute("mensajeComentario", "Solo se permite como máximo 200 caracteres en el comentario");
+		model.addAttribute("mensajeComentario", "Solo se permite como mï¿½ximo 200 caracteres en el comentario");
 		return "listFeedbacks";
 	}
 
@@ -101,20 +101,20 @@ public class FeedbackController {
 
 			return "redirect:/feedback/ActualizarComentarioss";
 		} else {
-
-			
-				
+			boolean flag = false;
+			if(objFeedback.getRating()!= 0 ) {		
 				objFeedback.setOwner(sesionOwner);
 				objFeedback.setWalker(sesionWalker);
-				boolean flag = fService.save(objFeedback);
+				 flag = fService.save(objFeedback);
 				model.addAttribute("claseComentario", "form-control item");
-
-				if (flag) {
-					return "redirect:/feedback/ActualizarComentarios";
-				} else {
-					model.addAttribute("mensaje", "Ocurrio un error");
-					return "redirect:/feedback/ActualizarComentarios";
-				}
+			}
+				
+			if (flag) {
+				return "redirect:/feedback/ActualizarComentarios";
+			} else {
+				model.addAttribute("mensaje", "Ocurrio un error");
+				return "redirect:/feedback/ActualizarComentarios";
+			}
 
 			
 		}
