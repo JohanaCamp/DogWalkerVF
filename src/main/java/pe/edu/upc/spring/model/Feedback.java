@@ -28,7 +28,7 @@ public class Feedback implements Serializable {
 
 	
 	//@NotEmpty(message = "Ingrese su comentario")
-	@Size(max=200, message = "Solo se permite como m·ximo 200 caracteres en el comentario")
+	@Size(max=200, message = "Solo se permite como m√°ximo 200 caracteres en el comentario")
 	@Column(name = "comment", length = 200, nullable = false)
 	private String comment;
 
