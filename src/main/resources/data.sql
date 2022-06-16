@@ -100,5 +100,3 @@ INSERT INTO time(time,value) VALUES ('2 horas y 15 minutos','2.25');
 INSERT INTO time(time,value) VALUES ('2 horas y 30 minutos','2.5');
 INSERT INTO time(time,value) VALUES ('2 horas y 45 minutos','2.75');
 INSERT INTO time(time,value) VALUES ('3 horas','3.0');
-
-
